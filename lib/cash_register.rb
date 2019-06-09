@@ -4,7 +4,7 @@ class CashRegister
   
   attr_accessor :quantity, :price, :total
   @@last_transaction = []
-  @items = []
+  @@cart = []
   
   def initialize(*employee_discount)
     @total = 0 
@@ -22,16 +22,25 @@ class CashRegister
   end 
   
   def items 
-    @items 
+    @@cart
   end 
   
-  def items()
+    describe '#items' do
+    it 'returns an array containing all items that have been added' do
+      new_register = CashRegister.new
+      new_register.add_item("eggs", 1.99)
+      new_register.add_item("tomato", 1.76, 3)
+      expect(new_register.items).to eq(["eggs", "tomato", "tomato", "tomato"])
+    end
+  end
   
   def add_item(title, price, *quantity)
     if quantity != []
       to_add = price * quantity[0].to_s.to_f
+      @@cart << title * quantity[0].to_s.to_i
     else 
       to_add = price 
+      @@cart << title 
     end 
       @@last_transaction << to_add
       self.total += to_add
