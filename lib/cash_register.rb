@@ -7,6 +7,7 @@ class CashRegister
   @cart = []
   
   def initialize(*employee_discount)
+    @cart = []
     @total = 0 
       def discount=(*employee_discount)
         @employee_discount = employee_discount[0][0]
