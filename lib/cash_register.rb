@@ -21,10 +21,9 @@ class CashRegister
     @total 
   end 
   
-  def items
+  def items 
     @items 
   end 
-  
   
   def add_item(title, price, *quantity)
     @items = items.push(title)
