@@ -25,6 +25,8 @@ class CashRegister
     @items 
   end 
   
+  def items()
+  
   def add_item(title, price, *quantity)
     if quantity != []
       to_add = price * quantity[0].to_s.to_f
