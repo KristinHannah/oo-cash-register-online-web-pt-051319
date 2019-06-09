@@ -51,8 +51,8 @@ class CashRegister
    #I want to go over the discount, and apply discount 
 
   def self.void_last_transaction
-    total = total - last_transaction
-    total
+    @total = total - last_transaction
+    @total
   end 
   
 end 
