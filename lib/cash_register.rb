@@ -21,7 +21,7 @@ class CashRegister
   end 
   
   def items
-    @items 
+    @items = []
   end 
   
   def add_item(title, price, *quantity)
@@ -31,6 +31,7 @@ class CashRegister
       to_add = price 
     end 
       @@last_transaction << to_add
+      items << title 
       self.total += to_add
   end 
   
