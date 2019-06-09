@@ -30,8 +30,7 @@ class CashRegister
     if quantity != []
       num = quantity[0].to_s.to_i
       to_add = price * quantity[0].to_s.to_f
-      num.times 
-        @cart << title 
+      num.times { @cart << title }
     else 
       to_add = price 
       @cart << title 
