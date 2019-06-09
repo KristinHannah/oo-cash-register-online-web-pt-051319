@@ -21,12 +21,12 @@ class CashRegister
   end 
   
   def items
-    @items 
+    @items = []
   end 
   
   
   def add_item(title, price, *quantity)
-    @items = title 
+    @items.push(title)
     if quantity != []
       to_add = price * quantity[0].to_s.to_f
     else 
