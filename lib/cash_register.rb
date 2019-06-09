@@ -48,7 +48,6 @@ class CashRegister
       return "There is no discount to apply."
      end 
   end 
-   #I want to go over the discount, and apply discount 
 
   def self.void_last_transaction
     @total = total - last_transaction
