@@ -28,7 +28,9 @@ class CashRegister
   
   def add_item(title, price, *quantity)
     if quantity != []
+      num = quantity[0].to_s.to_i
       to_add = price * quantity[0].to_s.to_f
+      loop.do num times 
       @cart << title * quantity[0].to_s.to_i
     else 
       to_add = price 
