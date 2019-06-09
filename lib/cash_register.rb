@@ -4,6 +4,7 @@ class CashRegister
   
   attr_accessor :quantity, :price, :total
   @@last_transaction = []
+  @items = []
   
   def initialize(*employee_discount)
     @total = 0 
