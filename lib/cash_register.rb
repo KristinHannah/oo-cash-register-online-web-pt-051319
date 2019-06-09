@@ -25,7 +25,6 @@ class CashRegister
   end 
   
   def add_item(title, price, *quantity)
-    binding.pry
     if quantity != []
       to_add = price * quantity[0].to_s.to_f
     else 
