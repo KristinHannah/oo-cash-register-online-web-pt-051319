@@ -4,6 +4,7 @@ class CashRegister
   
   attr_accessor :items, :quantity, :price, :total
   @@last_transaction = []
+  @items = []
   
   def initialize(*employee_discount)
     @total = 0 
@@ -21,7 +22,7 @@ class CashRegister
   end 
   
   def items
-    @items = []
+    @items 
   end 
   
   def add_item(title, price, *quantity)
@@ -30,8 +31,8 @@ class CashRegister
     else 
       to_add = price 
     end 
+      @items << title
       @@last_transaction << to_add
-      items << title 
       self.total += to_add
   end 
   
