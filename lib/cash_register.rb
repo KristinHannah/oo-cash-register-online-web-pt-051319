@@ -31,7 +31,7 @@ class CashRegister
       num = quantity[0].to_s.to_i
       to_add = price * quantity[0].to_s.to_f
       loop.do num times 
-      @cart << title * quantity[0].to_s.to_i
+      @cart << title 
     else 
       to_add = price 
       @cart << title 
