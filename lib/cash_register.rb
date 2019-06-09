@@ -21,8 +21,9 @@ class CashRegister
   end 
   
   def items
-    @items = []
+    @items 
   end 
+  
   
   def add_item(title, price, *quantity)
     if quantity != []
