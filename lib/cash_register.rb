@@ -29,10 +29,10 @@ class CashRegister
   def add_item(title, price, *quantity)
     if quantity != []
       to_add = price * quantity[0].to_s.to_f
-      @@cart << title * quantity[0].to_s.to_i
+      @cart << title * quantity[0].to_s.to_i
     else 
       to_add = price 
-      @@cart << title 
+      @cart << title 
     end 
       @@last_transaction << to_add
       self.total += to_add
