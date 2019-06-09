@@ -22,7 +22,7 @@ class CashRegister
   end 
   
   def items 
-    @@cart
+    @@cart 
   end 
   
   def add_item(title, price, *quantity)
