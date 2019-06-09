@@ -30,7 +30,6 @@ class CashRegister
     else 
       to_add = price 
     end 
-      @items << title
       @@last_transaction << to_add
       self.total += to_add
   end 
